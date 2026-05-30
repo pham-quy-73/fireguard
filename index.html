@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireGuard - Học Phòng Cháy Chữa Cháy Qua Interactive Video</title>
+    <meta name="description" content="Nền tảng học phòng cháy chữa cháy bằng video tương tác, giả lập các tình huống sinh tồn trong chung cư mini, nhà trọ và rèn luyện kỹ năng thoát nạn thực tế.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. NAVIGATION BAR -->
+    <header class="navbar-container">
+        <div class="navbar-wrapper wrapper-width">
+            <a href="#" class="nav-logo" id="nav-logo-link">
+                <!-- Fire Hydrant / Flame Icon -->
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2C12 2 19 7 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 7 12 2 12 2Z" fill="#ff1f1f" stroke="#b30e12"/>
+                    <path d="M12 7V13" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 16H12.01" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">Fire<span class="highlight">Guard</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu-el">
+                <a href="#" class="nav-link active">Trang chủ</a>
+                <a href="#khoa-hoc" class="nav-link">Khóa học</a>
+                <a href="#tinh-huong" class="nav-link">Tình huống mô phỏng</a>
+                <a href="#huong-dan" class="nav-link">Hướng dẫn thoát nạn</a>
+                <a href="#ve-chung-toi" class="nav-link">Về chúng tôi</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#login" class="btn-login" id="btn-login-trig">Đăng nhập</a>
+                <a href="#demo-interactive" class="btn-cta" id="btn-start-nav">Bắt đầu học</a>
+                <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Menu">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-wrapper wrapper-width">
+            <div class="hero-content">
+                <div class="badge-new animate-pulse">🔥 Nền tảng học PCCC thế hệ mới</div>
+                <h1 class="hero-title">
+                    Học Phòng Cháy Chữa Cháy Qua <span class="text-underline">Interactive Video</span> Mô Phỏng Thực Tế
+                </h1>
+                <p class="hero-subtitle">
+                    FireGuard giúp người học trải nghiệm các tình huống cháy thực tế thông qua video tương tác, từ đó nâng cao kỹ năng xử lý và thoát nạn an toàn.
+                </p>
+                <div class="hero-actions">
+                    <a href="#demo-interactive" class="btn-primary-hero">
+                        <span>Bắt đầu học ngay</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#demo-interactive" class="btn-secondary-hero">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-play">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        <span>Xem bài học demo</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- HERO VISUAL: Live MERN-like Dashboard Simulator -->
+            <div class="hero-visual" id="demo-interactive">
+                <div class="simulator-wrapper">
+                    <!-- Top Sim Bar -->
+                    <div class="sim-header">
+                        <div class="sim-dots">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                        </div>
+                        <div class="sim-title">Hệ thống PCCC Tương Tác - Dashboard</div>
+                        <div class="sim-badge">DEMO TRỰC TIẾP</div>
+                    </div>
+                    
+                    <div class="sim-body">
+                        <!-- Left Sidebar -->
+                        <aside class="sim-sidebar">
+                            <div class="sim-logo-area">
+                                <svg class="sim-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2C12 2 19 7 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 7 12 2 12 2Z" fill="#bd1c22"/>
+                                </svg>
+                                <div>
+                                    <div class="sim-brand-title">Hệ thống PCCC</div>
+                                    <div class="sim-brand-sub">Học tập tương tác</div>
+                                </div>
+                            </div>
+                            
+                            <nav class="sim-sidebar-menu">
+                                <a href="#" class="sim-menu-item" onclick="return false;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                                    Cơ sở dữ liệu
+                                </a>
+                                <a href="#" class="sim-menu-item active" onclick="return false;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                                    Danh sách video
+                                </a>
+                                <a href="#" class="sim-menu-item" onclick="return false;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    Lịch sử xem
+                                </a>
+                                <a href="#" class="sim-menu-item" onclick="return false;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    Tải bài học
+                                </a>
+                                <a href="#" class="sim-menu-item" onclick="return false;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                                    Cài đặt
+                                </a>
+                            </nav>
+                            
+                            <div class="sim-sidebar-footer">
+                                <button class="sim-sidebar-btn" onclick="alert('Đã bắt đầu học khoá học PCCC!')">Bắt đầu học</button>
+                                <div class="sim-help-logout">
+                                    <span>❓ Trợ giúp</span>
+                                    <span>🚪 Đăng xuất</span>
+                                </div>
+                            </div>
+                        </aside>
+                        
+                        <!-- Center Video & Content Player -->
+                        <main class="sim-content">
+                            <!-- Video Player Section -->
+                            <div class="sim-video-player">
+                                <div class="sim-video-screen" id="video-screen">
+                                    <!-- High fidelity backdrop showing high-rise building with soft smoke fire -->
+                                    <div class="video-graphic-bg">
+                                        <div class="flame-particles"></div>
+                                        <div class="smoke-layer"></div>
+                                        <div class="building-silhouette"></div>
+                                    </div>
+                                    
+                                    <!-- Interactive Prompt Dialog -->
+                                    <div class="interactive-prompt" id="question-card">
+                                        <div class="prompt-header">
+                                            <span class="prompt-alert-icon">🚨</span>
+                                            <span>TÌNH HUỐNG KHẨN CẤP</span>
+                                        </div>
+                                        <h4 class="prompt-text">Khi xảy ra cháy nhà cao tầng, bạn nên dùng thang nào để thoát hiểm nhanh chóng?</h4>
+                                        <form id="sim-quiz-form" onsubmit="return false;">
+                                            <label class="prompt-option">
+                                                <input type="radio" name="escape-route" value="A">
+                                                <span class="option-indicator"></span>
+                                                <span class="option-label">A. Thang máy</span>
+                                            </label>
+                                            <label class="prompt-option">
+                                                <input type="radio" name="escape-route" value="B">
+                                                <span class="option-indicator"></span>
+                                                <span class="option-label">B. Thang bộ thoát hiểm</span>
+                                            </label>
+                                            <button type="submit" class="btn-submit-answer" id="submit-answer-btn">Gửi đáp án</button>
+                                        </form>
+                                    </div>
+                                    
+                                    <!-- Interactive Feedback Dialog (Hidden by Default) -->
+                                    <div class="interactive-feedback hidden" id="feedback-card">
+                                        <div class="feedback-icon" id="feedback-icon">🔥</div>
+                                        <h4 class="feedback-title" id="feedback-title">Kết quả</h4>
+                                        <p class="feedback-desc" id="feedback-desc">Giải thích chi tiết tình huống sẽ hiển thị ở đây.</p>
+                                        <button class="btn-retry-continue" id="btn-next-step">Thử lại / Xem tiếp</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Video Content & Overview Info -->
+                            <div class="sim-video-details">
+                                <div class="badge-row">
+                                    <span class="badge-sim red-tint text-red">Cơ bản</span>
+                                    <span class="badge-sim red-tint text-red">Kỹ thuật</span>
+                                    <button class="sim-btn-action" onclick="alert('Đã lưu bài học vào thư viện!')">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                                        Lưu
+                                    </button>
+                                    <button class="sim-btn-action" onclick="alert('Đã copy link chia sẻ!')">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                        Chia sẻ
+                                    </button>
+                                </div>
+                                <h3 class="video-title">Kỹ thuật thoát hiểm và sử dụng thiết bị PCCC cơ bản</h3>
+                                <div class="rating-row">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <span class="rating-text"><strong>4.9</strong> (2,450 đánh giá)</span>
+                                    <span class="divider">•</span>
+                                    <span class="students-text">👥 15,2k học viên đã học</span>
+                                </div>
+                                
+                                <!-- Tabs Navigation -->
+                                <div class="sim-tabs">
+                                    <button class="sim-tab active">Mô tả chi tiết</button>
+                                    <button class="sim-tab">Đánh giá & Thảo luận (245)</button>
+                                    <button class="sim-tab">Tài liệu học tập</button>
+                                </div>
+                                <div class="tab-content-panel">
+                                    <p>Bài học này tập trung vào hai kỹ năng sống còn: Cách nhận biết các loại đám cháy và phương pháp thoát hiểm an toàn trong các tòa nhà cao tầng. Bạn sẽ được tìm hiểu tại sao việc sử dụng thang bộ lại quan trọng hơn thang máy và quy trình 4 bước chuẩn để sử dụng bình bột hiệu quả.</p>
+                                </div>
+                                
+                                <div class="benefits-grid">
+                                    <div class="benefit-card">
+                                        <span class="benefit-icon">🛡️</span>
+                                        <div>
+                                            <strong>Chứng nhận quốc gia</strong>
+                                            <p>Hoàn thành đạt 80% để nhận chứng chỉ</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-card">
+                                        <span class="benefit-icon">📝</span>
+                                        <div>
+                                            <strong>Ghi chú tương tác</strong>
+                                            <p>Hệ thống tự động lưu các mốc quan trọng</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Comment Section Mockup -->
+                                <div class="sim-comment-section">
+                                    <h4 class="comment-head">Bình luận & Thảo luận <span class="comment-sort">Sắp xếp theo: <strong>Mới nhất</strong> ▾</span></h4>
+                                    <!-- Comment input -->
+                                    <div class="comment-input-box">
+                                        <div class="user-avatar-mini">A</div>
+                                        <div class="comment-input-wrap">
+                                            <input type="text" placeholder="Chia sẻ cảm nghĩ hoặc thắc mắc của bạn..." id="sim-comm-input">
+                                            <div class="comment-input-actions">
+                                                <span>😊 📎</span>
+                                                <button class="btn-send-comment" id="sim-comm-submit">Gửi bình luận</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Comment threads from mockup image -->
+                                    <div class="comment-list" id="sim-comments-list">
+                                        <div class="comment-item">
+                                            <div class="avatar av-an"></div>
+                                            <div class="comment-body">
+                                                <h5 class="comment-user">Nguyễn Văn An <span class="time-stamp">2 giờ trước</span></h5>
+                                                <p class="comment-text">Các câu hỏi tương tác hiện lên đúng lúc mình đang lơ là, giúp tập trung trả lại rất tốt. Cảm ơn giảng viên!</p>
+                                                <div class="comment-actions"><span>👍 12</span> <span>Phản hồi</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-item">
+                                            <div class="avatar av-mai"></div>
+                                            <div class="comment-body">
+                                                <h5 class="comment-user">Lê Thị Mai <span class="time-stamp">5 giờ trước</span></h5>
+                                                <p class="comment-text">Phần giải thích về cơ chế hoạt động của thang thoát hiểm rất chi tiết. Mình đã tự tin hơn nếu lỡ gặp sự cố thật.</p>
+                                                <div class="comment-actions"><span>👍 8</span> <span>Phản hồi</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                        
+                        <!-- Right Sidebar (Lessons info) -->
+                        <aside class="sim-lessons-sidebar">
+                            <div class="lessons-count">
+                                <span>Danh sách bài học</span>
+                                <strong class="badge-count" id="sim-lessons-completed">8/12 bài học</strong>
+                            </div>
+                            
+                            <div class="lessons-list">
+                                <div class="lesson-item active">
+                                    <div class="lesson-thumb th-active">
+                                        <span class="play-indicator">▶</span>
+                                    </div>
+                                    <div class="lesson-detail">
+                                        <h5 class="lesson-name text-red">Đang xem: Kỹ thuật thoát hiểm...</h5>
+                                        <p class="lesson-meta">Vị trí: 10:20</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item">
+                                    <div class="lesson-thumb th-thumb9">
+                                        <span class="lesson-duration">08:24</span>
+                                    </div>
+                                    <div class="lesson-detail">
+                                        <h5 class="lesson-name">Bài 9: Hệ thống báo cháy tự động</h5>
+                                        <p class="lesson-meta">Video tiếp theo</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item locked">
+                                    <div class="lesson-thumb th-locked">
+                                        <span class="lock-indicator">🔒</span>
+                                    </div>
+                                    <div class="lesson-detail">
+                                        <h5 class="lesson-name">Bài 10: Quy trình cứu hộ chung cư</h5>
+                                        <p class="lesson-meta">Mở khóa sau bài 9</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Progress Container -->
+                            <div class="progress-box">
+                                <h4 class="progress-title">Hành trình của bạn</h4>
+                                <p class="progress-stats">Đã hoàn thành <span id="progress-percent">65%</span> (2.5/4 giờ học)</p>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" id="sim-progress-fill" style="width: 65%;"></div>
+                                </div>
+                                <button class="btn-download-syllabus" onclick="alert('Đang tải tài liệu lộ trình học tập PCCC...')">Tải xuống lộ trình học</button>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TRUST INDICATORS -->
+    <section class="trust-indicators-section">
+        <div class="wrapper-width">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="100">100+</h3>
+                    <p class="stat-label">Video tương tác thực tế</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="20">20+</h3>
+                    <p class="stat-label">Tình huống mô phỏng</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="5000">5000+</h3>
+                    <p class="stat-label">Lượt học viên tham gia</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">100%</h3>
+                    <p class="stat-label">Hỗ trợ trên mọi thiết bị</p>
+                </div>
+            </div>
+            
+            <div class="highlights-container">
+                <h4 class="highlight-section-title">NỔI BẬT TRÊN HỆ THỐNG</h4>
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <div class="highlight-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                        </div>
+                        <h5>Interactive Learning</h5>
+                        <p>Học chủ động thông qua các nút lựa chọn quyết định trực tiếp trên khung hình.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        </div>
+                        <h5>Real-life Simulation</h5>
+                        <p>Dựng lại cực kỳ chân thực các vụ hỏa hoạn ở chung cư mini, phòng trọ, chập điện.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h5>Responsive Platform</h5>
+                        <p>Học mọi lúc mọi nơi trên điện thoại di động, máy tính bảng hay máy tính để bàn.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <h5>Progress Tracking</h5>
+                        <p>Lưu lại tiến độ tự động, chấm điểm trắc nghiệm và cấp chứng chỉ trực tuyến tức thì.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PROBLEM - SOLUTION SECTION -->
+    <section class="problem-solution-section" id="huong-dan">
+        <div class="wrapper-width">
+            <h2 class="section-title text-center">Vì sao cần học kỹ năng PCCC thực tế?</h2>
+            <p class="section-subtitle text-center">Phương pháp học truyền thống đang dần bộc lộ nhiều hạn chế lớn khi đối mặt với hiểm họa thực tế.</p>
+            
+            <div class="problem-solution-grid">
+                <!-- Pain Points side -->
+                <div class="ps-card pain-side">
+                    <div class="ps-card-header">
+                        <span class="ps-status-icon">⚠️</span>
+                        <h4>VẤN ĐỀ THỰC TRẠNG</h4>
+                    </div>
+                    <ul class="ps-list">
+                        <li>
+                            <div class="ps-bullet">✕</div>
+                            <div>
+                                <strong>Nhiều người thiếu kỹ năng xử lý khi có cháy</strong>
+                                <p>Hơn 80% vụ việc thương vong do nạn nhân hít khói độc và chạy sai hướng.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ps-bullet">✕</div>
+                            <div>
+                                <strong>Dễ hoảng loạn trong tình huống khẩn cấp</strong>
+                                <p>Thiếu sự cọ xát tâm lý khiến não bộ bị "đóng băng" khi đối mặt đám cháy.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ps-bullet">✕</div>
+                            <div>
+                                <strong>Khó hình dung các nguy cơ thực tế</strong>
+                                <p>Tài liệu sách vở hay tờ rơi thông thường không thể hiện độ khẩn trương của khói lửa.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ps-bullet">✕</div>
+                            <div>
+                                <strong>Thiếu môi trường mô phỏng trực quan</strong>
+                                <p>Các buổi diễn tập thực tế thường tốn kém và không tiếp cận được phần lớn người dân.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Solution side -->
+                <div class="ps-card solution-side">
+                    <div class="ps-card-header">
+                        <span class="ps-status-icon">✓</span>
+                        <h4>GIẢI PHÁP FIREGUARD</h4>
+                    </div>
+                    <p class="sol-intro">FireGuard ứng dụng công nghệ <strong>Interactive Video</strong> nhằm:</p>
+                    <ul class="ps-list">
+                        <li>
+                            <div class="ps-bullet sol-check">✓</div>
+                            <div>
+                                <strong>Mô phỏng tình huống cháy chân thực</strong>
+                                <p>Góc nhìn thứ nhất đưa bạn đi thẳng vào giữa trung tâm vụ hỏa hoạn giả lập cực sống động.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ps-bullet sol-check">✓</div>
+                            <div>
+                                <strong>Cho phép người học đưa ra quyết định</strong>
+                                <p>Mỗi lựa chọn rẽ trái, rẽ phải hay dùng vật dụng nào sẽ đưa bạn tới một đoạn kết khác nhau.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ps-bullet sol-check">✓</div>
+                            <div>
+                                <strong>Hiển thị hậu quả của từng lựa chọn</strong>
+                                <p>Nắm rõ nguyên nhân thất bại và rút ra kinh nghiệm xương máu ngay lập tức.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ps-bullet sol-check">✓</div>
+                            <div>
+                                <strong>Rèn luyện phản xạ thoát nạn an toàn</strong>
+                                <p>Lặp đi lặp lại nhiều lần giúp bộ não tự khắc ghi nhớ lối thoát hiểm tối ưu.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. KEY FEATURES -->
+    <section class="features-section" id="khoa-hoc">
+        <div class="wrapper-width">
+            <h2 class="section-title text-center">Tính năng nổi bật trên FireGuard</h2>
+            <p class="section-subtitle text-center">Môi trường giáo dục công nghệ số ưu việt, nâng cao tối đa trải nghiệm người dùng.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card-main">
+                    <div class="f-icon red-tint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                    </div>
+                    <h4>Interactive Video</h4>
+                    <p>Học thông qua video mô phỏng có câu hỏi trắc nghiệm và lựa chọn trực tiếp ngay trên màn hình phát.</p>
+                </div>
+                
+                <div class="feature-card-main">
+                    <div class="f-icon red-tint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    </div>
+                    <h4>Tình huống thực tế</h4>
+                    <p>Mô phỏng chân thực các sự cố cháy chung cư mini, phòng trọ, rò rỉ khí gas, chập điện gia đình.</p>
+                </div>
+                
+                <div class="feature-card-main">
+                    <div class="f-icon red-tint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h4>Theo dõi tiến trình</h4>
+                    <p>Lưu trữ trạng thái học tập chi tiết, ghi nhận kết quả và liên tục cập nhật lộ trình rèn luyện cá nhân.</p>
+                </div>
+                
+                <div class="feature-card-main">
+                    <div class="f-icon red-tint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    </div>
+                    <h4>Quiz tương tác</h4>
+                    <p>Hệ thống mini-quiz đan xen thông minh để củng cố lý thuyết ngay giữa các phân đoạn tình huống.</p>
+                </div>
+                
+                <div class="feature-card-main">
+                    <div class="f-icon red-tint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                    </div>
+                    <h4>Responsive Learning</h4>
+                    <p>Giao diện hiện đại tối ưu hóa hiển thị mượt mà trên tất cả điện thoại thông minh, tablet và máy tính.</p>
+                </div>
+                
+                <div class="feature-card-main">
+                    <div class="f-icon red-tint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
+                    </div>
+                    <h4>Dashboard quản trị</h4>
+                    <p>Hỗ trợ ban quản lý, trường học theo dõi, cập nhật ngân hàng video bài học và phân tích tiến độ dễ dàng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FEATURED SCENARIOS -->
+    <section class="scenarios-section" id="tinh-huong">
+        <div class="wrapper-width">
+            <h2 class="section-title text-center">Tình huống mô phỏng nổi bật</h2>
+            <p class="section-subtitle text-center">Những mô phỏng được đội ngũ chuyên viên PCCC xây dựng bám sát thực tiễn xã hội.</p>
+            
+            <div class="scenarios-grid">
+                <!-- Card 1 -->
+                <div class="scenario-card">
+                    <div class="scenario-thumb-img thumb-apartment">
+                        <div class="scenario-overlay-tag tag-high-danger">Cấp thiết</div>
+                    </div>
+                    <div class="scenario-info">
+                        <h4>Cháy chung cư mini lúc nửa đêm</h4>
+                        <p>Xử lý khẩn cấp khi hệ thống báo cháy kêu, hành lang ngập khói độc và lối thoát hiểm duy nhất bị chắn.</p>
+                        <a href="#demo-interactive" class="scenario-link"><span>Trải nghiệm ngay</span> →</a>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="scenario-card">
+                    <div class="scenario-thumb-img thumb-heater">
+                        <div class="scenario-overlay-tag tag-warning">Cảnh báo</div>
+                    </div>
+                    <div class="scenario-info">
+                        <h4>Cháy bình nóng lạnh phòng trọ</h4>
+                        <p>Nhận biết nguy cơ chập điện rò rỉ từ nhà tắm, dập lửa an toàn không dùng nước khi chưa ngắt cầu dao.</p>
+                        <a href="#demo-interactive" class="scenario-link"><span>Trải nghiệm ngay</span> →</a>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="scenario-card">
+                    <div class="scenario-thumb-img thumb-corridor">
+                        <div class="scenario-overlay-tag tag-high-danger">Nguy kịch</div>
+                    </div>
+                    <div class="scenario-info">
+                        <h4>Thoát hiểm hành lang đầy khói</h4>
+                        <p>Phương pháp cúi thấp người, dùng khăn ướt che mũi miệng và định hướng trong môi trường không ánh sáng.</p>
+                        <a href="#demo-interactive" class="scenario-link"><span>Trải nghiệm ngay</span> →</a>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="scenario-card">
+                    <div class="scenario-thumb-img thumb-extinguisher">
+                        <div class="scenario-overlay-tag tag-info">Kỹ năng</div>
+                    </div>
+                    <div class="scenario-info">
+                        <h4>Sử dụng bình chữa cháy CO₂</h4>
+                        <p>Quy trình giật chốt, hướng loa phun và kiểm soát khoảng cách an toàn tránh bị bỏng lạnh khí CO₂.</p>
+                        <a href="#demo-interactive" class="scenario-link"><span>Trải nghiệm ngay</span> →</a>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="scenario-card">
+                    <div class="scenario-thumb-img thumb-electric">
+                        <div class="scenario-overlay-tag tag-warning">Cơ bản</div>
+                    </div>
+                    <div class="scenario-info">
+                        <h4>Xử lý cháy do chập điện gia đình</h4>
+                        <p>Phản xạ ngắt aptomat tổng, sơ tán các chất dễ cháy xung quanh và dùng bình cứu hỏa đúng chủng loại.</p>
+                        <a href="#demo-interactive" class="scenario-link"><span>Trải nghiệm ngay</span> →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scenarios-cta-box text-center">
+                <a href="#demo-interactive" class="btn-more-scenarios">Khám phá bài học</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. LEARNING PROCESS -->
+    <section class="process-section">
+        <div class="wrapper-width">
+            <h2 class="section-title text-center">Quy trình học tập đơn giản</h2>
+            <p class="section-subtitle text-center">Chỉ với 5 bước đơn giản để trang bị kỹ năng sinh tồn suốt đời.</p>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-num-circle">1</div>
+                    <div class="step-content">
+                        <h4>Đăng nhập hệ thống</h4>
+                        <p>Tạo tài khoản nhanh chóng trong vài giây để bắt đầu lưu tiến trình cá nhân của riêng bạn.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-num-circle">2</div>
+                    <div class="step-content">
+                        <h4>Chọn bài học kỹ năng</h4>
+                        <p>Lựa chọn các chuyên đề phù hợp từ thư viện đa dạng (chung cư, điện, gas, sơ cứu...).</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-num-circle">3</div>
+                    <div class="step-content">
+                        <h4>Xem video tương tác</h4>
+                        <p>Theo dõi diễn biến tình huống trực quan chân thực dưới góc nhìn thứ nhất.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-num-circle">4</div>
+                    <div class="step-content">
+                        <h4>Trả lời tình huống khẩn</h4>
+                        <p>Đưa ra quyết định thoát nạn trong giới hạn thời gian để rèn luyện phản xạ thực tế.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-num-circle">5</div>
+                    <div class="step-content">
+                        <h4>Hoàn thành & Nhận chứng chỉ</h4>
+                        <p>Hệ thống tự động chấm điểm và đánh giá kỹ năng để cấp chứng nhận hoàn thành.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TESTIMONIALS -->
+    <section class="testimonials-section" id="ve-chung-toi">
+        <div class="wrapper-width">
+            <h2 class="section-title text-center">Người học đánh giá về chúng tôi</h2>
+            <p class="section-subtitle text-center">Cảm nhận thực tế của những học viên đã tham gia trải nghiệm mô phỏng.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card-item">
+                    <div class="stars-gold">⭐⭐⭐⭐⭐</div>
+                    <blockquote>“Các tình huống mô phỏng rất thực tế và dễ nhớ. Vụ cháy chung cư mini rèn cho mình phản xạ tìm lối thoát thay vì mất bình tĩnh.”</blockquote>
+                    <div class="testi-author">
+                        <div class="testi-avatar av-an"></div>
+                        <div>
+                            <strong>Nguyễn Văn An</strong>
+                            <p>Cư dân chung cư (Hà Nội)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card-item">
+                    <div class="stars-gold">⭐⭐⭐⭐⭐</div>
+                    <blockquote>“Interactive video giúp mình hiểu rõ cách thoát nạn khi có cháy. Việc lựa chọn phương án và thấy ngay hậu quả làm mình ấn tượng mãi.”</blockquote>
+                    <div class="testi-author">
+                        <div class="testi-avatar av-mai"></div>
+                        <div>
+                            <strong>Lê Thị Mai</strong>
+                            <p>Sinh viên Đại học</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card-item">
+                    <div class="stars-gold">⭐⭐⭐⭐⭐</div>
+                    <blockquote>“Giao diện đẹp, cực kỳ dễ sử dụng và học rất cuốn. Mình đã chia sẻ cho cả gia đình cùng học chung để bảo vệ lẫn nhau.”</blockquote>
+                    <div class="testi-author">
+                        <div class="testi-avatar">H</div>
+                        <div>
+                            <strong>Hoàng Anh Tuấn</strong>
+                            <p>Kỹ sư Điện lực</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. PRIMARY CTA -->
+    <section class="primary-cta-section">
+        <div class="cta-glow-overlay"></div>
+        <div class="wrapper-width text-center cta-content">
+            <span class="cta-icon-flame">🚒</span>
+            <h2 class="cta-headline">Sẵn sàng học kỹ năng sinh tồn khi xảy ra hỏa hoạn?</h2>
+            <p class="cta-sub">Hãy đầu tư 15 phút mỗi ngày để bảo vệ bản thân và những người thân yêu khỏi hiểm họa khói lửa.</p>
+            <div class="cta-btns">
+                <a href="#demo-interactive" class="btn-cta-primary-large">Bắt đầu học ngay</a>
+                <a href="#demo-interactive" class="btn-cta-secondary-large">Xem demo interactive video</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ SECTION -->
+    <section class="faq-section">
+        <div class="wrapper-width">
+            <h2 class="section-title text-center">Câu hỏi thường gặp</h2>
+            <p class="section-subtitle text-center">Giải đáp các thắc mắc phổ biến nhất về nền tảng FireGuard.</p>
+            
+            <div class="faq-container">
+                <div class="faq-row">
+                    <button class="faq-question">
+                        <span>FireGuard là gì?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>FireGuard là nền tảng số hóa giáo dục kỹ năng phòng cháy chữa cháy (PCCC) hàng đầu tại Việt Nam, ứng dụng công nghệ Interactive Video (video tương tác) để nâng cao chất lượng phản xạ và kỹ năng sinh tồn của người học trong các sự cố khẩn cấp ngoài đời thực.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-row">
+                    <button class="faq-question">
+                        <span>Có cần cài đặt ứng dụng không?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Hoàn toàn không cần thiết! Hệ thống được tối ưu hóa chạy mượt mà ngay trên mọi trình duyệt web (Chrome, Safari, Edge, Firefox). Bạn có thể học ngay lập tức trên máy tính, điện thoại hoặc máy tính bảng mà không cần tải ứng dụng.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-row">
+                    <button class="faq-question">
+                        <span>Có lưu tiến trình học không?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Có! Hệ thống tự động ghi nhận bài học đang xem, các câu hỏi tương tác đã hoàn thiện và kết quả trắc nghiệm để cập nhật trực tiếp vào tài khoản người học. Bạn có thể tạm dừng và tiếp tục học bất kỳ lúc nào.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-row">
+                    <button class="faq-question">
+                        <span>Có hỗ trợ điện thoại không?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Có, FireGuard có giao diện responsive (tự động tương thích và co giãn) hoàn hảo dành cho thiết bị di động, đảm bảo bạn có trải nghiệm bấm chọn tình huống trực quan, dễ dàng thao tác bằng ngón tay giống như trên máy tính.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="footer-container">
+        <div class="wrapper-width">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C12 2 19 7 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 7 12 2 12 2Z" fill="#ff1f1f" stroke="#b30e12"/>
+                        </svg>
+                        <span class="logo-text">Fire<span class="highlight">Guard</span></span>
+                    </a>
+                    <p class="footer-desc">Học kỹ năng phòng cháy, an tâm sinh sống mỗi ngày. Nền tảng video giả lập tình huống sinh tồn số 1 Việt Nam.</p>
+                </div>
+                
+                <div class="footer-nav-col">
+                    <h4>Khám phá</h4>
+                    <div class="footer-links">
+                        <a href="#">Trang chủ</a>
+                        <a href="#khoa-hoc">Khóa học</a>
+                        <a href="#huong-dan">Hướng dẫn</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-col">
+                    <h4>Thông tin</h4>
+                    <div class="footer-links">
+                        <a href="#ve-chung-toi">Về chúng tôi</a>
+                        <a href="#lien-he">Liên hệ</a>
+                        <a href="#chinh-sach">Chính sách bảo mật</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-col">
+                    <h4>Theo dõi kết nối</h4>
+                    <div class="social-links-grid">
+                        <a href="https://facebook.com" target="_blank" class="social-link-btn" aria-label="Facebook">
+                            F
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="social-link-btn" aria-label="YouTube">
+                            Y
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" class="social-link-btn" aria-label="TikTok">
+                            T
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom text-center">
+                <p class="footer-cta-text">FireGuard – Learn to Survive Fire Emergencies 🚒</p>
+                <p class="copyright">&copy; 2026 FireGuard Learning Platform. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Page logic script -->
+    <script src="script.js"></script>
+</body>
+</html>

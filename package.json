@@ -1,0 +1,16 @@
+{
+  "name": "fireguard-landingpage",
+  "version": "1.0.0",
+  "description": "FireGuard Interactive PCCC Learning Platform Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "start": "lite-server",
+    "dev": "lite-server"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "author": "Antigravity",
+  "license": "ISC"
+}
